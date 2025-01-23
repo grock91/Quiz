@@ -33,12 +33,25 @@
         li {
             margin: 10px 0;
         }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #e74c3c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #c0392b;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Consolidated Results</h1>
         <div id="results"></div>
+        <button id="reset-results">Reset Results</button>
     </div>
 
     <script>
@@ -74,6 +87,12 @@
             p.textContent = personalityTypes[personality];
             resultsDiv.appendChild(p);
         }
+
+        // Reset Results Button
+        document.getElementById("reset-results").addEventListener("click", function () {
+            localStorage.removeItem("participants");
+            alert("Results have been reset. Refresh the page to see the changes.");
+        });
     </script>
 </body>
 </html>
