@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bollywood Personality Quiz</title>
+    <title>Personality Quiz</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -74,7 +74,7 @@
     <div class="container">
         <!-- Entry Page -->
         <div id="entry-page">
-            <h1>Welcome to the Bollywood Personality Quiz! 🎬</h1>
+            <h1>Welcome to the Personality Quiz! 🎉</h1>
             <form id="entry-form">
                 <label for="name">Enter your name:</label>
                 <input type="text" id="name" name="name" required>
@@ -84,9 +84,9 @@
 
         <!-- Quiz Page -->
         <div id="quiz-page" class="hidden">
-            <h1>Hi, <span id="participant-name"></span>! Let's find your Bollywood personality. 🎥</h1>
+            <h1>Hi, <span id="participant-name"></span>! Let's find your personality. 🕵️‍♂️</h1>
             <form id="quiz-form">
-                <!-- Question 1 -->
+                <!-- Bollywood Question -->
                 <div class="question">
                     <p>1. How do you handle challenges? 💪 (Think *Chak De! India*)</p>
                     <label>
@@ -112,158 +112,106 @@
                 </div>
                 <hr>
 
-                <!-- Question 2 -->
+                <!-- Food Preferences Question -->
                 <div class="question">
-                    <p>2. What’s your idea of a perfect weekend? 🌴 (Think *Zindagi Na Milegi Dobara*)</p>
+                    <p>2. What’s your favorite cuisine? 🍲</p>
                     <label>
-                        <input type="radio" name="q2" value="Free Spirit" required>
-                        A high-energy adventure, like the road trip in *Zindagi Na Milegi Dobara*. 🚗
+                        <input type="radio" name="q2" value="Adventurous" required>
+                        Street food and spicy dishes. 🌶️
                     </label>
                     <label>
-                        <input type="radio" name="q2" value="Caregiver">
-                        A relaxing day with loved ones, like the family moments in *Kabhi Khushi Kabhie Gham*. 👨‍👩‍👧‍👦
+                        <input type="radio" name="q2" value="Comfort Seeker">
+                        Homestyle meals and comfort food. 🍛
                     </label>
                     <label>
-                        <input type="radio" name="q2" value="Dreamer">
-                        A creative project or hobby, like the music in *Rockstar*. 🎶
+                        <input type="radio" name="q2" value="Health Conscious">
+                        Healthy and organic meals. 🥗
                     </label>
                     <label>
-                        <input type="radio" name="q2" value="Leader">
-                        A fun night out with friends, like the party in *Cocktail*. 🍹
+                        <input type="radio" name="q2" value="Foodie">
+                        Gourmet and exotic dishes. 🍣
                     </label>
                     <label>
-                        <input type="radio" name="q2" value="Strategist">
-                        A quiet day planning for the future, like the strategy in *Special 26*. 📅
+                        <input type="radio" name="q2" value="Traditionalist">
+                        Traditional and regional cuisines. 🍚
                     </label>
                 </div>
                 <hr>
 
-                <!-- Question 3 -->
+                <!-- Travel Preferences Question -->
                 <div class="question">
-                    <p>3. How do you express love? 💖 (Think *Dilwale Dulhania Le Jayenge*)</p>
+                    <p>3. What’s your ideal vacation? 🌍</p>
                     <label>
-                        <input type="radio" name="q3" value="Leader" required>
-                        Through grand gestures, like Raj in *Dilwale Dulhania Le Jayenge*. 🌹
+                        <input type="radio" name="q3" value="Adventurer" required>
+                        Trekking in the mountains. 🏔️
                     </label>
                     <label>
-                        <input type="radio" name="q3" value="Caregiver">
-                        Through small, thoughtful acts, like the lunchbox in *The Lunchbox*. 🍱
+                        <input type="radio" name="q3" value="Relaxer">
+                        Lounging on a beach. 🏖️
                     </label>
                     <label>
-                        <input type="radio" name="q3" value="Dreamer">
-                        Through words and deep conversations, like Heer in *Rockstar*. 💬
+                        <input type="radio" name="q3" value="Explorer">
+                        Exploring historical cities. 🏰
                     </label>
                     <label>
-                        <input type="radio" name="q3" value="Free Spirit">
-                        Through humor and playfulness, like Bittoo in *Band Baaja Baaraat*. 😆
+                        <input type="radio" name="q3" value="Nature Lover">
+                        Camping in the wilderness. 🌲
                     </label>
                     <label>
-                        <input type="radio" name="q3" value="Strategist">
-                        Through practical support and advice, like the lawyer in *Pink*. ⚖️
+                        <input type="radio" name="q3" value="City Enthusiast">
+                        Enjoying the nightlife in a bustling city. 🌃
                     </label>
                 </div>
                 <hr>
 
-                <!-- Question 4 -->
+                <!-- Hobbies Question -->
                 <div class="question">
-                    <p>4. What’s your approach to teamwork? 🤝 (Think *Lagaan*)</p>
+                    <p>4. What’s your favorite way to spend free time? 🎨</p>
                     <label>
-                        <input type="radio" name="q4" value="Leader" required>
-                        Take charge and lead the group, like Bhuvan in *Lagaan*. 🏏
+                        <input type="radio" name="q4" value="Creative" required>
+                        Painting, writing, or other creative hobbies. 🖌️
                     </label>
                     <label>
-                        <input type="radio" name="q4" value="Caregiver">
-                        Support others and keep the team united, like the team in *Chak De! India*. 🏅
+                        <input type="radio" name="q4" value="Active">
+                        Playing sports or working out. 🏃‍♂️
                     </label>
                     <label>
-                        <input type="radio" name="q4" value="Dreamer">
-                        Bring creativity and new ideas, like Jordan in *Rockstar*. 🎨
+                        <input type="radio" name="q4" value="Social">
+                        Hanging out with friends and family. 👨‍👩‍👧‍👦
                     </label>
                     <label>
-                        <input type="radio" name="q4" value="Free Spirit">
-                        Keep the mood light and fun, like the team in *Zindagi Na Milegi Dobara*. 🎉
+                        <input type="radio" name="q4" value="Relaxed">
+                        Watching movies or reading books. 📚
                     </label>
                     <label>
-                        <input type="radio" name="q4" value="Strategist">
-                        Analyze the situation and plan carefully, like the heist in *Special 26*. 🕵️
+                        <input type="radio" name="q4" value="Tech Enthusiast">
+                        Gaming or exploring new tech gadgets. 🎮
                     </label>
                 </div>
                 <hr>
 
-                <!-- Question 5 -->
+                <!-- Fun Facts Question -->
                 <div class="question">
-                    <p>5. What’s your favorite type of movie? 🎬 (Think *3 Idiots*)</p>
+                    <p>5. What’s your go-to snack? 🍿</p>
                     <label>
-                        <input type="radio" name="q5" value="Leader" required>
-                        Inspirational dramas, like *3 Idiots*. 🎓
+                        <input type="radio" name="q5" value="Sweet Tooth" required>
+                        Chocolate or desserts. 🍫
                     </label>
                     <label>
-                        <input type="radio" name="q5" value="Caregiver">
-                        Heartwarming family stories, like *Kabhi Khushi Kabhie Gham*. 👨‍👩‍👧‍👦
+                        <input type="radio" name="q5" value="Savory Lover">
+                        Chips or salty snacks. 🥨
                     </label>
                     <label>
-                        <input type="radio" name="q5" value="Dreamer">
-                        Artistic and thought-provoking films, like *Tamasha*. 🎭
+                        <input type="radio" name="q5" value="Healthy Eater">
+                        Fruits or nuts. 🍎
                     </label>
                     <label>
-                        <input type="radio" name="q5" value="Free Spirit">
-                        Comedies and lighthearted rom-coms, like *Hera Pheri*. 😂
+                        <input type="radio" name="q5" value="Indulger">
+                        Fast food or fried snacks. 🍔
                     </label>
                     <label>
-                        <input type="radio" name="q5" value="Strategist">
-                        Thrillers and suspenseful plots, like *Drishyam*. 🕵️
-                    </label>
-                </div>
-                <hr>
-
-                <!-- Question 6 -->
-                <div class="question">
-                    <p>6. How do you deal with stress? 🧘‍♂️ (Think *Dear Zindagi*)</p>
-                    <label>
-                        <input type="radio" name="q6" value="Leader" required>
-                        Tackle it head-on and stay focused, like Kabir in *Chak De! India*. 🎯
-                    </label>
-                    <label>
-                        <input type="radio" name="q6" value="Caregiver">
-                        Talk to loved ones for support, like Kaira in *Dear Zindagi*. 💬
-                    </label>
-                    <label>
-                        <input type="radio" name="q6" value="Dreamer">
-                        Express it through art or music, like Jordan in *Rockstar*. 🎸
-                    </label>
-                    <label>
-                        <input type="radio" name="q6" value="Free Spirit">
-                        Crack jokes and keep things light, like Bittoo in *Band Baaja Baaraat*. 😆
-                    </label>
-                    <label>
-                        <input type="radio" name="q6" value="Strategist">
-                        Analyze the problem and find a solution, like the lawyer in *Pink*. ⚖️
-                    </label>
-                </div>
-                <hr>
-
-                <!-- Question 7 -->
-                <div class="question">
-                    <p>7. What’s your life motto? 🌟 (Think *Yeh Jawaani Hai Deewani*)</p>
-                    <label>
-                        <input type="radio" name="q7" value="Leader" required>
-                        Dream big and make it happen, like Bunny in *Yeh Jawaani Hai Deewani*. 🌠
-                    </label>
-                    <label>
-                        <input type="radio" name="q7" value="Caregiver">
-                        Family and love come first, like Rahul in *Kabhi Khushi Kabhie Gham*. ❤️
-                    </label>
-                    <label>
-                        <input type="radio" name="q7" value="Dreamer">
-                        Express yourself and follow your passion, like Ved in *Tamasha*. 🎨
-                    </label>
-                    <label>
-                        <input type="radio" name="q7" value="Free Spirit">
-                        Life is a party—enjoy every moment, like Kabir in *Zindagi Na Milegi Dobara*. 🎉
-                    </label>
-                    <label>
-                        <input type="radio" name="q7" value="Strategist">
-                        Plan carefully and stay prepared, like the team in *Special 26*. 📅
+                        <input type="radio" name="q5" value="Experimenter">
+                        Trying new and unique snacks. 🍪
                     </label>
                 </div>
                 <hr>
@@ -291,10 +239,10 @@
         // Personality types and descriptions
         const personalityTypes = {
             "Leader": "You’re a natural-born leader like Shah Rukh Khan in *Chak De! India*. You inspire others with your confidence and determination! 🏆",
-            "Caregiver": "You’re a kind and nurturing soul like Kajol in *Dilwale Dulhania Le Jayenge*. Your loved ones are lucky to have you! ❤️",
-            "Free Spirit": "You’re a fun-loving adventurer like Ranveer Singh in *Band Baaja Baaraat*. Your energy and humor light up every room! 😂",
-            "Strategist": "You’re a calm and analytical thinker like Amitabh Bachchan in *Pink*. Your wisdom and planning skills are unmatched! 🧠",
-            "Dreamer": "You’re a passionate artist like Ranbir Kapoor in *Rockstar*. Your creativity and emotional depth inspire everyone around you! 🎸"
+            "Adventurer": "You’re always up for a challenge and love exploring new places and cuisines. 🌍",
+            "Creative": "You’re a dreamer and an artist at heart, always looking for ways to express yourself. 🎨",
+            "Relaxer": "You enjoy the simple things in life, like good food and relaxing vacations. 🏖️",
+            "Foodie": "You’re passionate about food and love trying new dishes and cuisines. 🍲"
         };
 
         // Store participant data
@@ -318,9 +266,7 @@
                 document.querySelector('input[name="q2"]:checked').value,
                 document.querySelector('input[name="q3"]:checked').value,
                 document.querySelector('input[name="q4"]:checked').value,
-                document.querySelector('input[name="q5"]:checked').value,
-                document.querySelector('input[name="q6"]:checked').value,
-                document.querySelector('input[name="q7"]:checked').value
+                document.querySelector('input[name="q5"]:checked').value
             ];
 
             // Calculate personality type
