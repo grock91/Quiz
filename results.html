@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consolidated Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #e74c3c;
+        }
+        h2 {
+            color: #e74c3c;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Consolidated Results</h1>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        // Personality types and descriptions
+        const personalityTypes = {
+            "Leader": "You’re a natural-born leader like Shah Rukh Khan in *Chak De! India*. You inspire others with your confidence and determination!",
+            "Caregiver": "You’re a kind and nurturing soul like Kajol in *Dilwale Dulhania Le Jayenge*. Your loved ones are lucky to have you!",
+            "Free Spirit": "You’re a fun-loving adventurer like Ranveer Singh in *Band Baaja Baaraat*. Your energy and humor light up every room!",
+            "Strategist": "You’re a calm and analytical thinker like Amitabh Bachchan in *Pink*. Your wisdom and planning skills are unmatched!",
+            "Dreamer": "You’re a passionate artist like Ranbir Kapoor in *Rockstar*. Your creativity and emotional depth inspire everyone around you!"
+        };
+
+        // Get participant data from localStorage
+        const participants = JSON.parse(localStorage.getItem("participants")) || {};
+
+        // Group participants by personality type
+        const groupedResults = {};
+        for (const [name, personality] of Object.entries(participants)) {
+            if (!groupedResults[personality]) {
+                groupedResults[personality] = [];
+            }
+            groupedResults[personality].push(name);
+        }
+
+        // Display results
+        const resultsDiv = document.getElementById("results");
+        for (const [personality, names] of Object.entries(groupedResults)) {
+            const h2 = document.createElement("h2");
+            h2.textContent = `${personality} - ${names.join(", ")}`;
+            resultsDiv.appendChild(h2);
+
+            const p = document.createElement("p");
+            p.textContent = personalityTypes[personality];
+            resultsDiv.appendChild(p);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bollywood Personality Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #e74c3c;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="radio"] {
+            margin-bottom: 10px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #e74c3c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #c0392b;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .hidden {
+            display: none;
+        }
+        a {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Entry Page -->
+        <div id="entry-page">
+            <h1>Welcome to the Bollywood Personality Quiz!</h1>
+            <form id="entry-form">
+                <label for="name">Enter your name:</label>
+                <input type="text" id="name" name="name" required>
+                <button type="submit">Start Quiz</button>
+            </form>
+        </div>
+
+        <!-- Quiz Page -->
+        <div id="quiz-page" class="hidden">
+            <h1>Hi, <span id="participant-name"></span>! Let's find your Bollywood personality.</h1>
+            <form id="quiz-form">
+                <!-- Question 1 -->
+                <div class="question">
+                    <p>1. How do you handle challenges? (Think *Chak De! India*)</p>
+                    <label>
+                        <input type="radio" name="q1" value="Leader" required>
+                        Face them head-on with confidence, like Shah Rukh Khan in *Chak De! India*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q1" value="Strategist">
+                        Stay calm and think strategically, like Amitabh Bachchan in *Pink*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q1" value="Caregiver">
+                        Rely on friends and family for support, like Kajol in *Dilwale Dulhania Le Jayenge*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q1" value="Free Spirit">
+                        Use humor to lighten the mood, like Ranveer Singh in *Band Baaja Baaraat*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q1" value="Dreamer">
+                        Reflect deeply and find creative solutions, like Ranbir Kapoor in *Rockstar*.
+                    </label><br>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question">
+                    <p>2. What’s your idea of a perfect weekend? (Think *Zindagi Na Milegi Dobara*)</p>
+                    <label>
+                        <input type="radio" name="q2" value="Free Spirit" required>
+                        A high-energy adventure, like the road trip in *Zindagi Na Milegi Dobara*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q2" value="Caregiver">
+                        A relaxing day with loved ones, like the family moments in *Kabhi Khushi Kabhie Gham*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q2" value="Dreamer">
+                        A creative project or hobby, like the music in *Rockstar*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q2" value="Leader">
+                        A fun night out with friends, like the party in *Cocktail*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q2" value="Strategist">
+                        A quiet day planning for the future, like the strategy in *Special 26*.
+                    </label><br>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question">
+                    <p>3. How do you express love? (Think *Dilwale Dulhania Le Jayenge*)</p>
+                    <label>
+                        <input type="radio" name="q3" value="Leader" required>
+                        Through grand gestures, like Raj in *Dilwale Dulhania Le Jayenge*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q3" value="Caregiver">
+                        Through small, thoughtful acts, like the lunchbox in *The Lunchbox*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q3" value="Dreamer">
+                        Through words and deep conversations, like Heer in *Rockstar*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q3" value="Free Spirit">
+                        Through humor and playfulness, like Bittoo in *Band Baaja Baaraat*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q3" value="Strategist">
+                        Through practical support and advice, like the lawyer in *Pink*.
+                    </label><br>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question">
+                    <p>4. What’s your approach to teamwork? (Think *Lagaan*)</p>
+                    <label>
+                        <input type="radio" name="q4" value="Leader" required>
+                        Take charge and lead the group, like Bhuvan in *Lagaan*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q4" value="Caregiver">
+                        Support others and keep the team united, like the team in *Chak De! India*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q4" value="Dreamer">
+                        Bring creativity and new ideas, like Jordan in *Rockstar*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q4" value="Free Spirit">
+                        Keep the mood light and fun, like the team in *Zindagi Na Milegi Dobara*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q4" value="Strategist">
+                        Analyze the situation and plan carefully, like the heist in *Special 26*.
+                    </label><br>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question">
+                    <p>5. What’s your favorite type of movie? (Think *3 Idiots*)</p>
+                    <label>
+                        <input type="radio" name="q5" value="Leader" required>
+                        Inspirational dramas, like *3 Idiots*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q5" value="Caregiver">
+                        Heartwarming family stories, like *Kabhi Khushi Kabhie Gham*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q5" value="Dreamer">
+                        Artistic and thought-provoking films, like *Tamasha*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q5" value="Free Spirit">
+                        Comedies and lighthearted rom-coms, like *Hera Pheri*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q5" value="Strategist">
+                        Thrillers and suspenseful plots, like *Drishyam*.
+                    </label><br>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question">
+                    <p>6. How do you deal with stress? (Think *Dear Zindagi*)</p>
+                    <label>
+                        <input type="radio" name="q6" value="Leader" required>
+                        Tackle it head-on and stay focused, like Kabir in *Chak De! India*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q6" value="Caregiver">
+                        Talk to loved ones for support, like Kaira in *Dear Zindagi*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q6" value="Dreamer">
+                        Express it through art or music, like Jordan in *Rockstar*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q6" value="Free Spirit">
+                        Crack jokes and keep things light, like Bittoo in *Band Baaja Baaraat*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q6" value="Strategist">
+                        Analyze the problem and find a solution, like the lawyer in *Pink*.
+                    </label><br>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question">
+                    <p>7. What’s your life motto? (Think *Yeh Jawaani Hai Deewani*)</p>
+                    <label>
+                        <input type="radio" name="q7" value="Leader" required>
+                        Dream big and make it happen, like Bunny in *Yeh Jawaani Hai Deewani*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q7" value="Caregiver">
+                        Family and love come first, like Rahul in *Kabhi Khushi Kabhie Gham*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q7" value="Dreamer">
+                        Express yourself and follow your passion, like Ved in *Tamasha*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q7" value="Free Spirit">
+                        Life is a party—enjoy every moment, like Kabir in *Zindagi Na Milegi Dobara*.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q7" value="Strategist">
+                        Plan carefully and stay prepared, like the team in *Special 26*.
+                    </label><br>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Results Page -->
+        <div id="results-page" class="hidden">
+            <h1>Quiz Results</h1>
+            <h2>Your Personality:</h2>
+            <p id="personality-result"></p>
+            <h2>Description:</h2>
+            <p id="personality-description"></p>
+
+            <h2>Consolidated Analysis:</h2>
+            <p><a href="results.html" target="_blank">View Consolidated Results</a></p>
+
+            <button onclick="location.reload()">Take Quiz Again</button>
+        </div>
+    </div>
+
+    <script>
+        // Personality types and descriptions
+        const personalityTypes = {
+            "Leader": "You’re a natural-born leader like Shah Rukh Khan in *Chak De! India*. You inspire others with your confidence and determination!",
+            "Caregiver": "You’re a kind and nurturing soul like Kajol in *Dilwale Dulhania Le Jayenge*. Your loved ones are lucky to have you!",
+            "Free Spirit": "You’re a fun-loving adventurer like Ranveer Singh in *Band Baaja Baaraat*. Your energy and humor light up every room!",
+            "Strategist": "You’re a calm and analytical thinker like Amitabh Bachchan in *Pink*. Your wisdom and planning skills are unmatched!",
+            "Dreamer": "You’re a passionate artist like Ranbir Kapoor in *Rockstar*. Your creativity and emotional depth inspire everyone around you!"
+        };
+
+        // Store participant data
+        let participants = JSON.parse(localStorage.getItem("participants")) || {};
+
+        // Entry form submission
+        document.getElementById("entry-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            document.getElementById("participant-name").textContent = name;
+            document.getElementById("entry-page").classList.add("hidden");
+            document.getElementById("quiz-page").classList.remove("hidden");
+        });
+
+        // Quiz form submission
+        document.getElementById("quiz-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const answers = [
+                document.querySelector('input[name="q1"]:checked').value,
+                document.querySelector('input[name="q2"]:checked').value,
+                document.querySelector('input[name="q3"]:checked').value,
+                document.querySelector('input[name="q4"]:checked').value,
+                document.querySelector('input[name="q5"]:checked').value,
+                document.querySelector('input[name="q6"]:checked').value,
+                document.querySelector('input[name="q7"]:checked').value
+            ];
+
+            // Calculate personality type
+            const personalityCounts = {};
+            answers.forEach(answer => {
+                personalityCounts[answer] = (personalityCounts[answer] || 0) + 1;
+            });
+            const personality = Object.keys(personalityCounts).reduce((a, b) => personalityCounts[a] > personalityCounts[b] ? a : b);
+
+            // Save participant data
+            participants[name] = personality;
+            localStorage.setItem("participants", JSON.stringify(participants));
+
+            // Display results
+            document.getElementById("personality-result").textContent = personality;
+            document.getElementById("personality-description").textContent = personalityTypes[personality];
+
+            document.getElementById("quiz-page").classList.add("hidden");
+            document.getElementById("results-page").classList.remove("hidden");
+        });
+    </script>
+</body>
+</html>
