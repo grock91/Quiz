@@ -28,10 +28,10 @@
         }
         label {
             display: block;
-            margin: 10px 0 5px;
+            margin: 5px 0; /* Reduced spacing between options */
         }
         input[type="text"], input[type="radio"] {
-            margin-bottom: 10px;
+            margin-bottom: 5px; /* Reduced spacing */
         }
         button {
             display: block;
@@ -62,13 +62,19 @@
         a:hover {
             text-decoration: underline;
         }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Entry Page -->
         <div id="entry-page">
-            <h1>Welcome to the Bollywood Personality Quiz!</h1>
+            <h1>Welcome to the Bollywood Personality Quiz! 🎬</h1>
             <form id="entry-form">
                 <label for="name">Enter your name:</label>
                 <input type="text" id="name" name="name" required>
@@ -78,182 +84,189 @@
 
         <!-- Quiz Page -->
         <div id="quiz-page" class="hidden">
-            <h1>Hi, <span id="participant-name"></span>! Let's find your Bollywood personality.</h1>
+            <h1>Hi, <span id="participant-name"></span>! Let's find your Bollywood personality. 🎥</h1>
             <form id="quiz-form">
                 <!-- Question 1 -->
                 <div class="question">
-                    <p>1. How do you handle challenges? (Think *Chak De! India*)</p>
+                    <p>1. How do you handle challenges? 💪 (Think *Chak De! India*)</p>
                     <label>
                         <input type="radio" name="q1" value="Leader" required>
-                        Face them head-on with confidence, like Shah Rukh Khan in *Chak De! India*.
-                    </label><br>
+                        Face them head-on with confidence, like Shah Rukh Khan in *Chak De! India*. 🏆
+                    </label>
                     <label>
                         <input type="radio" name="q1" value="Strategist">
-                        Stay calm and think strategically, like Amitabh Bachchan in *Pink*.
-                    </label><br>
+                        Stay calm and think strategically, like Amitabh Bachchan in *Pink*. 🧠
+                    </label>
                     <label>
                         <input type="radio" name="q1" value="Caregiver">
-                        Rely on friends and family for support, like Kajol in *Dilwale Dulhania Le Jayenge*.
-                    </label><br>
+                        Rely on friends and family for support, like Kajol in *Dilwale Dulhania Le Jayenge*. ❤️
+                    </label>
                     <label>
                         <input type="radio" name="q1" value="Free Spirit">
-                        Use humor to lighten the mood, like Ranveer Singh in *Band Baaja Baaraat*.
-                    </label><br>
+                        Use humor to lighten the mood, like Ranveer Singh in *Band Baaja Baaraat*. 😂
+                    </label>
                     <label>
                         <input type="radio" name="q1" value="Dreamer">
-                        Reflect deeply and find creative solutions, like Ranbir Kapoor in *Rockstar*.
-                    </label><br>
+                        Reflect deeply and find creative solutions, like Ranbir Kapoor in *Rockstar*. 🎸
+                    </label>
                 </div>
+                <hr>
 
                 <!-- Question 2 -->
                 <div class="question">
-                    <p>2. What’s your idea of a perfect weekend? (Think *Zindagi Na Milegi Dobara*)</p>
+                    <p>2. What’s your idea of a perfect weekend? 🌴 (Think *Zindagi Na Milegi Dobara*)</p>
                     <label>
                         <input type="radio" name="q2" value="Free Spirit" required>
-                        A high-energy adventure, like the road trip in *Zindagi Na Milegi Dobara*.
-                    </label><br>
+                        A high-energy adventure, like the road trip in *Zindagi Na Milegi Dobara*. 🚗
+                    </label>
                     <label>
                         <input type="radio" name="q2" value="Caregiver">
-                        A relaxing day with loved ones, like the family moments in *Kabhi Khushi Kabhie Gham*.
-                    </label><br>
+                        A relaxing day with loved ones, like the family moments in *Kabhi Khushi Kabhie Gham*. 👨‍👩‍👧‍👦
+                    </label>
                     <label>
                         <input type="radio" name="q2" value="Dreamer">
-                        A creative project or hobby, like the music in *Rockstar*.
-                    </label><br>
+                        A creative project or hobby, like the music in *Rockstar*. 🎶
+                    </label>
                     <label>
                         <input type="radio" name="q2" value="Leader">
-                        A fun night out with friends, like the party in *Cocktail*.
-                    </label><br>
+                        A fun night out with friends, like the party in *Cocktail*. 🍹
+                    </label>
                     <label>
                         <input type="radio" name="q2" value="Strategist">
-                        A quiet day planning for the future, like the strategy in *Special 26*.
-                    </label><br>
+                        A quiet day planning for the future, like the strategy in *Special 26*. 📅
+                    </label>
                 </div>
+                <hr>
 
                 <!-- Question 3 -->
                 <div class="question">
-                    <p>3. How do you express love? (Think *Dilwale Dulhania Le Jayenge*)</p>
+                    <p>3. How do you express love? 💖 (Think *Dilwale Dulhania Le Jayenge*)</p>
                     <label>
                         <input type="radio" name="q3" value="Leader" required>
-                        Through grand gestures, like Raj in *Dilwale Dulhania Le Jayenge*.
-                    </label><br>
+                        Through grand gestures, like Raj in *Dilwale Dulhania Le Jayenge*. 🌹
+                    </label>
                     <label>
                         <input type="radio" name="q3" value="Caregiver">
-                        Through small, thoughtful acts, like the lunchbox in *The Lunchbox*.
-                    </label><br>
+                        Through small, thoughtful acts, like the lunchbox in *The Lunchbox*. 🍱
+                    </label>
                     <label>
                         <input type="radio" name="q3" value="Dreamer">
-                        Through words and deep conversations, like Heer in *Rockstar*.
-                    </label><br>
+                        Through words and deep conversations, like Heer in *Rockstar*. 💬
+                    </label>
                     <label>
                         <input type="radio" name="q3" value="Free Spirit">
-                        Through humor and playfulness, like Bittoo in *Band Baaja Baaraat*.
-                    </label><br>
+                        Through humor and playfulness, like Bittoo in *Band Baaja Baaraat*. 😆
+                    </label>
                     <label>
                         <input type="radio" name="q3" value="Strategist">
-                        Through practical support and advice, like the lawyer in *Pink*.
-                    </label><br>
+                        Through practical support and advice, like the lawyer in *Pink*. ⚖️
+                    </label>
                 </div>
+                <hr>
 
                 <!-- Question 4 -->
                 <div class="question">
-                    <p>4. What’s your approach to teamwork? (Think *Lagaan*)</p>
+                    <p>4. What’s your approach to teamwork? 🤝 (Think *Lagaan*)</p>
                     <label>
                         <input type="radio" name="q4" value="Leader" required>
-                        Take charge and lead the group, like Bhuvan in *Lagaan*.
-                    </label><br>
+                        Take charge and lead the group, like Bhuvan in *Lagaan*. 🏏
+                    </label>
                     <label>
                         <input type="radio" name="q4" value="Caregiver">
-                        Support others and keep the team united, like the team in *Chak De! India*.
-                    </label><br>
+                        Support others and keep the team united, like the team in *Chak De! India*. 🏅
+                    </label>
                     <label>
                         <input type="radio" name="q4" value="Dreamer">
-                        Bring creativity and new ideas, like Jordan in *Rockstar*.
-                    </label><br>
+                        Bring creativity and new ideas, like Jordan in *Rockstar*. 🎨
+                    </label>
                     <label>
                         <input type="radio" name="q4" value="Free Spirit">
-                        Keep the mood light and fun, like the team in *Zindagi Na Milegi Dobara*.
-                    </label><br>
+                        Keep the mood light and fun, like the team in *Zindagi Na Milegi Dobara*. 🎉
+                    </label>
                     <label>
                         <input type="radio" name="q4" value="Strategist">
-                        Analyze the situation and plan carefully, like the heist in *Special 26*.
-                    </label><br>
+                        Analyze the situation and plan carefully, like the heist in *Special 26*. 🕵️
+                    </label>
                 </div>
+                <hr>
 
                 <!-- Question 5 -->
                 <div class="question">
-                    <p>5. What’s your favorite type of movie? (Think *3 Idiots*)</p>
+                    <p>5. What’s your favorite type of movie? 🎬 (Think *3 Idiots*)</p>
                     <label>
                         <input type="radio" name="q5" value="Leader" required>
-                        Inspirational dramas, like *3 Idiots*.
-                    </label><br>
+                        Inspirational dramas, like *3 Idiots*. 🎓
+                    </label>
                     <label>
                         <input type="radio" name="q5" value="Caregiver">
-                        Heartwarming family stories, like *Kabhi Khushi Kabhie Gham*.
-                    </label><br>
+                        Heartwarming family stories, like *Kabhi Khushi Kabhie Gham*. 👨‍👩‍👧‍👦
+                    </label>
                     <label>
                         <input type="radio" name="q5" value="Dreamer">
-                        Artistic and thought-provoking films, like *Tamasha*.
-                    </label><br>
+                        Artistic and thought-provoking films, like *Tamasha*. 🎭
+                    </label>
                     <label>
                         <input type="radio" name="q5" value="Free Spirit">
-                        Comedies and lighthearted rom-coms, like *Hera Pheri*.
-                    </label><br>
+                        Comedies and lighthearted rom-coms, like *Hera Pheri*. 😂
+                    </label>
                     <label>
                         <input type="radio" name="q5" value="Strategist">
-                        Thrillers and suspenseful plots, like *Drishyam*.
-                    </label><br>
+                        Thrillers and suspenseful plots, like *Drishyam*. 🕵️
+                    </label>
                 </div>
+                <hr>
 
                 <!-- Question 6 -->
                 <div class="question">
-                    <p>6. How do you deal with stress? (Think *Dear Zindagi*)</p>
+                    <p>6. How do you deal with stress? 🧘‍♂️ (Think *Dear Zindagi*)</p>
                     <label>
                         <input type="radio" name="q6" value="Leader" required>
-                        Tackle it head-on and stay focused, like Kabir in *Chak De! India*.
-                    </label><br>
+                        Tackle it head-on and stay focused, like Kabir in *Chak De! India*. 🎯
+                    </label>
                     <label>
                         <input type="radio" name="q6" value="Caregiver">
-                        Talk to loved ones for support, like Kaira in *Dear Zindagi*.
-                    </label><br>
+                        Talk to loved ones for support, like Kaira in *Dear Zindagi*. 💬
+                    </label>
                     <label>
                         <input type="radio" name="q6" value="Dreamer">
-                        Express it through art or music, like Jordan in *Rockstar*.
-                    </label><br>
+                        Express it through art or music, like Jordan in *Rockstar*. 🎸
+                    </label>
                     <label>
                         <input type="radio" name="q6" value="Free Spirit">
-                        Crack jokes and keep things light, like Bittoo in *Band Baaja Baaraat*.
-                    </label><br>
+                        Crack jokes and keep things light, like Bittoo in *Band Baaja Baaraat*. 😆
+                    </label>
                     <label>
                         <input type="radio" name="q6" value="Strategist">
-                        Analyze the problem and find a solution, like the lawyer in *Pink*.
-                    </label><br>
+                        Analyze the problem and find a solution, like the lawyer in *Pink*. ⚖️
+                    </label>
                 </div>
+                <hr>
 
                 <!-- Question 7 -->
                 <div class="question">
-                    <p>7. What’s your life motto? (Think *Yeh Jawaani Hai Deewani*)</p>
+                    <p>7. What’s your life motto? 🌟 (Think *Yeh Jawaani Hai Deewani*)</p>
                     <label>
                         <input type="radio" name="q7" value="Leader" required>
-                        Dream big and make it happen, like Bunny in *Yeh Jawaani Hai Deewani*.
-                    </label><br>
+                        Dream big and make it happen, like Bunny in *Yeh Jawaani Hai Deewani*. 🌠
+                    </label>
                     <label>
                         <input type="radio" name="q7" value="Caregiver">
-                        Family and love come first, like Rahul in *Kabhi Khushi Kabhie Gham*.
-                    </label><br>
+                        Family and love come first, like Rahul in *Kabhi Khushi Kabhie Gham*. ❤️
+                    </label>
                     <label>
                         <input type="radio" name="q7" value="Dreamer">
-                        Express yourself and follow your passion, like Ved in *Tamasha*.
-                    </label><br>
+                        Express yourself and follow your passion, like Ved in *Tamasha*. 🎨
+                    </label>
                     <label>
                         <input type="radio" name="q7" value="Free Spirit">
-                        Life is a party—enjoy every moment, like Kabir in *Zindagi Na Milegi Dobara*.
-                    </label><br>
+                        Life is a party—enjoy every moment, like Kabir in *Zindagi Na Milegi Dobara*. 🎉
+                    </label>
                     <label>
                         <input type="radio" name="q7" value="Strategist">
-                        Plan carefully and stay prepared, like the team in *Special 26*.
-                    </label><br>
+                        Plan carefully and stay prepared, like the team in *Special 26*. 📅
+                    </label>
                 </div>
+                <hr>
 
                 <button type="submit">Submit</button>
             </form>
@@ -261,7 +274,7 @@
 
         <!-- Results Page -->
         <div id="results-page" class="hidden">
-            <h1>Quiz Results</h1>
+            <h1>Quiz Results 🎉</h1>
             <h2>Your Personality:</h2>
             <p id="personality-result"></p>
             <h2>Description:</h2>
@@ -277,11 +290,11 @@
     <script>
         // Personality types and descriptions
         const personalityTypes = {
-            "Leader": "You’re a natural-born leader like Shah Rukh Khan in *Chak De! India*. You inspire others with your confidence and determination!",
-            "Caregiver": "You’re a kind and nurturing soul like Kajol in *Dilwale Dulhania Le Jayenge*. Your loved ones are lucky to have you!",
-            "Free Spirit": "You’re a fun-loving adventurer like Ranveer Singh in *Band Baaja Baaraat*. Your energy and humor light up every room!",
-            "Strategist": "You’re a calm and analytical thinker like Amitabh Bachchan in *Pink*. Your wisdom and planning skills are unmatched!",
-            "Dreamer": "You’re a passionate artist like Ranbir Kapoor in *Rockstar*. Your creativity and emotional depth inspire everyone around you!"
+            "Leader": "You’re a natural-born leader like Shah Rukh Khan in *Chak De! India*. You inspire others with your confidence and determination! 🏆",
+            "Caregiver": "You’re a kind and nurturing soul like Kajol in *Dilwale Dulhania Le Jayenge*. Your loved ones are lucky to have you! ❤️",
+            "Free Spirit": "You’re a fun-loving adventurer like Ranveer Singh in *Band Baaja Baaraat*. Your energy and humor light up every room! 😂",
+            "Strategist": "You’re a calm and analytical thinker like Amitabh Bachchan in *Pink*. Your wisdom and planning skills are unmatched! 🧠",
+            "Dreamer": "You’re a passionate artist like Ranbir Kapoor in *Rockstar*. Your creativity and emotional depth inspire everyone around you! 🎸"
         };
 
         // Store participant data
