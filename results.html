@@ -45,9 +45,12 @@
         button:hover {
             background: #c0392b;
         }
-        .celebrity {
-            font-style: italic;
-            color: #555;
+        .celebrity-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
         }
     </style>
 </head>
@@ -59,27 +62,32 @@
     </div>
 
     <script>
-        // Personality types, descriptions, and celebrity figures
+        // Personality types, descriptions, and celebrity images
         const personalityTypes = {
             "Leader": {
                 description: "You’re a natural-born leader who inspires others with your confidence and determination. 🏆",
-                celebrity: "Shah Rukh Khan"
+                celebrity: "Shah Rukh Khan",
+                image: "https://via.placeholder.com/150?text=Shah+Rukh+Khan"
             },
             "Adventurer": {
                 description: "You’re bold, curious, and always up for a new adventure. 🌍",
-                celebrity: "Bear Grylls"
+                celebrity: "Bear Grylls",
+                image: "https://via.placeholder.com/150?text=Bear+Grylls"
             },
             "Creative": {
                 description: "You’re imaginative, artistic, and love expressing yourself. 🎨",
-                celebrity: "A.R. Rahman"
+                celebrity: "A.R. Rahman",
+                image: "https://via.placeholder.com/150?text=A.R.+Rahman"
             },
             "Caregiver": {
                 description: "You’re kind, nurturing, and always there for others. ❤️",
-                celebrity: "Mother Teresa"
+                celebrity: "Mother Teresa",
+                image: "https://via.placeholder.com/150?text=Mother+Teresa"
             },
             "Thinker": {
                 description: "You’re analytical, logical, and love solving problems. 🧠",
-                celebrity: "Elon Musk"
+                celebrity: "Elon Musk",
+                image: "https://via.placeholder.com/150?text=Elon+Musk"
             }
         };
 
@@ -102,14 +110,15 @@
             h2.textContent = `${personality} - ${names.join(", ")}`;
             resultsDiv.appendChild(h2);
 
+            const img = document.createElement("img");
+            img.src = personalityTypes[personality].image;
+            img.alt = personalityTypes[personality].celebrity;
+            img.className = "celebrity-img";
+            resultsDiv.appendChild(img);
+
             const p = document.createElement("p");
             p.textContent = personalityTypes[personality].description;
             resultsDiv.appendChild(p);
-
-            const celebrity = document.createElement("p");
-            celebrity.className = "celebrity";
-            celebrity.textContent = `You’re like ${personalityTypes[personality].celebrity}!`;
-            resultsDiv.appendChild(celebrity);
         }
 
         // Reset Results Button
