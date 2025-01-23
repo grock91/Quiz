@@ -45,6 +45,10 @@
         button:hover {
             background: #c0392b;
         }
+        .celebrity {
+            font-style: italic;
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -55,18 +59,28 @@
     </div>
 
     <script>
-        // Personality types and descriptions
+        // Personality types, descriptions, and celebrity figures
         const personalityTypes = {
-            "Leader": "You’re a natural-born leader like Shah Rukh Khan in *Chak De! India*. You inspire others with your confidence and determination! 🏆",
-            "Adventurer": "You’re always up for a challenge and love exploring new places and cuisines. 🌍",
-            "Creative": "You’re a dreamer and an artist at heart, always looking for ways to express yourself. 🎨",
-            "Relaxer": "You enjoy the simple things in life, like good food and relaxing vacations. 🏖️",
-            "Foodie": "You’re passionate about food and love trying new dishes and cuisines. 🍲",
-            "Logical": "You’re a logical thinker who makes decisions based on facts and analysis. 🧠",
-            "Intuitive": "You trust your gut and go with your instincts. 🌟",
-            "Problem Solver": "You tackle problems head-on and find practical solutions. 🛠️",
-            "Visual Learner": "You learn best through visuals like diagrams and charts. 🖼️",
-            "Dreamer": "You dream big and believe in making the impossible possible. 🌠"
+            "Leader": {
+                description: "You’re a natural-born leader who inspires others with your confidence and determination. 🏆",
+                celebrity: "Shah Rukh Khan"
+            },
+            "Adventurer": {
+                description: "You’re bold, curious, and always up for a new adventure. 🌍",
+                celebrity: "Bear Grylls"
+            },
+            "Creative": {
+                description: "You’re imaginative, artistic, and love expressing yourself. 🎨",
+                celebrity: "A.R. Rahman"
+            },
+            "Caregiver": {
+                description: "You’re kind, nurturing, and always there for others. ❤️",
+                celebrity: "Mother Teresa"
+            },
+            "Thinker": {
+                description: "You’re analytical, logical, and love solving problems. 🧠",
+                celebrity: "Elon Musk"
+            }
         };
 
         // Get participant data from localStorage
@@ -89,8 +103,13 @@
             resultsDiv.appendChild(h2);
 
             const p = document.createElement("p");
-            p.textContent = personalityTypes[personality];
+            p.textContent = personalityTypes[personality].description;
             resultsDiv.appendChild(p);
+
+            const celebrity = document.createElement("p");
+            celebrity.className = "celebrity";
+            celebrity.textContent = `You’re like ${personalityTypes[personality].celebrity}!`;
+            resultsDiv.appendChild(celebrity);
         }
 
         // Reset Results Button
