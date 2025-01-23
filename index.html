@@ -145,7 +145,85 @@
                 </div>
                 <hr>
 
-                <!-- Add 8 more questions here (up to 10) -->
+                <!-- Question 3 -->
+                <div class="question">
+                    <p>3. What’s your favorite way to spend free time? 🎨</p>
+                    <label>
+                        <input type="radio" name="q3" value="Leader" required>
+                        Organizing events or leading a team. 🎯
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="Adventurer">
+                        Trying out new activities or sports. 🏄‍♂️
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="Creative">
+                        Painting, writing, or other creative hobbies. 🖌️
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="Caregiver">
+                        Spending time with family or helping others. 👨‍👩‍👧‍👦
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="Thinker">
+                        Reading, solving puzzles, or learning something new. 📚
+                    </label>
+                </div>
+                <hr>
+
+                <!-- Question 4 -->
+                <div class="question">
+                    <p>4. How do you make decisions? 🤔</p>
+                    <label>
+                        <input type="radio" name="q4" value="Leader" required>
+                        Quickly and confidently. ⚡
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="Adventurer">
+                        Go with your gut feeling. 🌟
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="Creative">
+                        Think creatively and explore all options. 🎨
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="Caregiver">
+                        Consider how it will affect others. ❤️
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="Thinker">
+                        Analyze the pros and cons carefully. 🧠
+                    </label>
+                </div>
+                <hr>
+
+                <!-- Question 5 -->
+                <div class="question">
+                    <p>5. What’s your communication style? 🗣️</p>
+                    <label>
+                        <input type="radio" name="q5" value="Leader" required>
+                        Direct and to the point. 🎯
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="Adventurer">
+                        Energetic and enthusiastic. ⚡
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="Creative">
+                        Expressive and imaginative. 🎭
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="Caregiver">
+                        Empathetic and supportive. ❤️
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="Thinker">
+                        Logical and well-structured. 🧠
+                    </label>
+                </div>
+                <hr>
+
+                <!-- Add 5 more questions here (up to 10) -->
 
                 <button type="submit">Submit</button>
             </form>
@@ -216,7 +294,10 @@
             const answers = [
                 document.querySelector('input[name="q1"]:checked').value,
                 document.querySelector('input[name="q2"]:checked').value,
-                // Add answers for questions 3-10 here
+                document.querySelector('input[name="q3"]:checked').value,
+                document.querySelector('input[name="q4"]:checked').value,
+                document.querySelector('input[name="q5"]:checked').value,
+                // Add answers for questions 6-10 here
             ];
 
             // Calculate personality type
